@@ -12,30 +12,8 @@ struct Line {
 
 fn main() {
     let lines = load_lines(utils::read_puzzle_input());
-    // for row in map.iter() {
-    //     for value in row.iter() {
-    //         if *value == 0 {
-    //             print!(".");
-    //         } else {
-    //             print!("{}", *value);
-    //         }
-    //     }
-    //     println!();
-    // }
     println!("Part 1: {}", count_overlaps(build_map(&lines, false)));
     println!("Part 2: {}", count_overlaps(build_map(&lines, true)));
-
-    // let map = build_map(&lines, true);
-    // for row in map.iter() {
-    //     for value in row.iter() {
-    //         if *value == 0 {
-    //             print!(".");
-    //         } else {
-    //             print!("{}", *value);
-    //         }
-    //     }
-    //     println!();
-    // }
 }
 
 fn build_map(lines: &Vec<Line>, include_diagonals: bool) -> Vec<Vec<u32>> {
